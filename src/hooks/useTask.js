@@ -26,7 +26,6 @@ const generateTask = () => ({
 });
 
 export const useTask = () => {
-  // const [{ task }, dispatch] = useReducer(taskReducer, initialState);
   const [tasks, setTasks] = useState([]);
   const textInputRef = useRef({});
   const lastInputFocus = useRef(null);
