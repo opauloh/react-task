@@ -32,13 +32,9 @@ export const useTask = () => {
   const lastInputFocus = useRef(null);
 
   useEffect(() => {
-    // tasks.forEach((task) => {
-    //   textInputRef.current[task.id].focus;
-    // });
-    // if (tasks.length > 0) textInputRef.current[tasks[0].id].focus();
-    if (lastInputFocus.current) textInputRef.current[lastInputFocus.current].focus();
-
-    // tasks[0]
+    if (lastInputFocus.current) {
+      textInputRef.current[lastInputFocus.current].focus();
+    }
   }, [tasks]);
   const addTask = () => {
     const task = generateTask();
